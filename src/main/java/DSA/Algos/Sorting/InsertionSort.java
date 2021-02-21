@@ -2,9 +2,9 @@ package DSA.Algos.Sorting;
 
 public class InsertionSort {
 
-    public static void sort(int [] arr )
+    static void sort(int [] arr )
     {
-        int size = arr.length;
+        int size = arr.length - 1;
 
         for(int i = 1 ; i <= size ; i++)
         {
@@ -16,10 +16,27 @@ public class InsertionSort {
                 j = j-1;
             }
             arr[j+1] = current;
-
-
         }
     }
-    //[2,5,2,2,2,45,5,6]
+
+    static <T extends Comparable<T>> void sort(T [] ar)
+    {
+        int size = ar.length - 1;
+
+        for(int i = 1 ; i <= size  ; i++)
+        {
+            T key = ar[i];
+
+            int x = i - 1;
+
+            while (x >= 0 && ar[x].compareTo(key) > 0)
+            {
+                ar[x+1] = ar[x];
+                x--;
+            }
+            ar[x+1] = key;
+        }
+    }
+
 
 }

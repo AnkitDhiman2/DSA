@@ -34,7 +34,7 @@ class BubbleSort {
     }
 
 
-    static < T extends Comparable > void sort(T [] a)
+    static < T extends Comparable<T> > void sort(T [] a)
     {
         int size = a.length;
         for (int i = 0 ; i < size ; i ++)

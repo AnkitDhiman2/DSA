@@ -3,7 +3,7 @@ package DSA.Algos.Searching;
 public class LinearSearch {
 
 
-    public static int search(int [] ar , int element)
+    static int search(int [] ar , int element)
     {
         for(int i = 0 ; i < ar.length ; i++)
         {
@@ -16,7 +16,7 @@ public class LinearSearch {
 
 
 
-    public static < T > int search( T [] ar , T element)
+    static < T extends Comparable<T>> int search( T [] ar , T element)
     {
         for(int i = 0 ; i < ar.length ; i++)
         {
